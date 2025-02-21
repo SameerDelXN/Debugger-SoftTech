@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect, useRef } from 'react';
 import { Users, Building, Award, Star } from 'lucide-react';
-
+import Image from 'next/image';
 const AnimatedCounter = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0);
   const countRef = useRef(count);
@@ -152,9 +152,15 @@ const StatisticsSection = () => {
         {/* Trust Badges */}
         <div className="mt-16 text-center">
           <p className="text-gray-500 mb-6">Trusted by Leading Companies</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-50">
+          <div className="flex flex-wrap justify-center items-center gap-8  ">
             {[1, 2, 3, 4, 5].map((index) => (
-              <div key={index} className="w-32 h-12 bg-gray-200 rounded-lg"></div>
+              <div key={index} className="w-32 h-12 bg-gray-200 rounded-lg flex items-center justify-center">
+                <Image
+                    src={`/partner/partner${index}.svg`}
+                    width={100}
+                    height={100}
+                />
+              </div>
             ))}
           </div>
         </div>

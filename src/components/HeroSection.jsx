@@ -4,7 +4,7 @@ import { ChevronRight, Rocket, Users, Award } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center">
+    <div className="relative min-h-screen flex items-center" name="home">
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-900/80" />
@@ -86,29 +86,17 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-8 h-12 rounded-full border-2 border-white/20 flex items-center justify-center">
-          <div className="w-1 h-3 bg-white/60 rounded-full animate-scroll" />
-        </div>
+      {/* 3D Model Image */}
+      <div className="absolute top-0 right-24  h-full w-1/3 hidden lg:block">
+        <img 
+          src="/3dModel.png" 
+          alt="3D Model Representation" 
+          className="w-full h-full object-contain"
+        />
       </div>
 
-      <style jsx>{`
-        @keyframes scroll {
-          0% { transform: translateY(0); opacity: 1; }
-          100% { transform: translateY(10px); opacity: 0; }
-        }
-        .animate-scroll {
-          animation: scroll 1.5s infinite;
-        }
-        @keyframes fade-in-up {
-          0% { opacity: 0; transform: translateY(20px); }
-          100% { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in-up {
-          animation: fade-in-up 0.6s ease-out forwards;
-        }
-      `}</style>
+    
+     
     </div>
   );
 };

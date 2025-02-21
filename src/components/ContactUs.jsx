@@ -12,30 +12,32 @@ const ContactUs = () => {
       icon: <MapPin className="w-6 h-6" />,
       label: "Visit Us",
       value: "Ravet, Pune",
-      color: "from-rose-400 to-red-600"
+      link: "https://www.google.com/maps/place/Ravet,+Pune,+Maharashtra,+India/@18.6653245,73.7431368,14z/data=!3m1!4b1!4m6!3m5!1s0x3bc9e36566085555:0x89e2733989c4509!8m2!3d18.6653263!4d73.760646!16s%2Fm%2F040n99j?entry=ttu",
+      color: "from-rose-400 to-red-600",
     },
     {
       icon: <Phone className="w-6 h-6" />,
       label: "Call Us",
       value: "8446344495",
       link: "tel:8446344495",
-      color: "from-green-400 to-emerald-600"
+      color: "from-green-400 to-emerald-600",
     },
     {
       icon: <Mail className="w-6 h-6" />,
       label: "Email Us",
       value: "debuggersofttech@outlook.com",
       link: "mailto:debuggersofttech@outlook.com",
-      color: "from-blue-400 to-indigo-600"
+      color: "from-blue-400 to-indigo-600",
     },
     {
       icon: <Globe className="w-6 h-6" />,
       label: "Website",
       value: "Debuggersofttech.com",
       link: "https://debuggersofttech.com",
-      color: "from-purple-400 to-violet-600"
-    }
+      color: "from-purple-400 to-violet-600",
+    },
   ];
+
 
   const quickQueries = [
     "Course Information",
@@ -45,7 +47,7 @@ const ContactUs = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden" name="contact">
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,transparent)] pointer-events-none" />
       
       <div className="container mx-auto px-6 lg:px-12 relative">

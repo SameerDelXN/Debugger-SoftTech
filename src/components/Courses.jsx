@@ -56,7 +56,7 @@ const CourseCategories = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white" name="courses">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -96,7 +96,7 @@ const CourseCategories = () => {
                 {category.description}
               </p>
 
-              <a 
+              {/* <a 
                 href={category.link}
                 className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-300"
               >
@@ -109,13 +109,13 @@ const CourseCategories = () => {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </a> */}
             </div>
           ))}
         </div>
 
         {/* View All Button */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <a 
             href="/courses"
             className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300"
@@ -130,7 +130,7 @@ const CourseCategories = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );

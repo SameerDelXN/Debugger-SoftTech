@@ -4,7 +4,7 @@ import { Target } from 'lucide-react';
 
 const MissionStatement = () => {
   return (
-    <section className="relative py-20 overflow-hidden">
+    <section className="relative py-20 overflow-hidden" name="about">
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 bg-gray-50">
         <div className="absolute inset-0 opacity-30" 

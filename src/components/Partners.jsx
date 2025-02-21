@@ -15,12 +15,12 @@ const PlacementPartners = () => {
   ];
 
   const partnerLogos = [
-    "/api/placeholder/150/80",
-    "/api/placeholder/150/80",
-    "/api/placeholder/150/80",
-    "/api/placeholder/150/80",
-    "/api/placeholder/150/80",
-    "/api/placeholder/150/80",
+    "/partner/partner1.svg",
+    "/partner/partner2.svg",
+    "/partner/partner3.svg",
+    "/partner/partner4.svg",
+    "/partner/partner5.svg",
+    "/partner/partner6.svg",
   ];
 
   const containerVariants = {

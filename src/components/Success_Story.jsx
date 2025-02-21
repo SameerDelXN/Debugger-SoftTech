@@ -6,7 +6,7 @@ const SuccessStories = () => {
   const testimonials = [
     {
       name: "Priya Sharma",
-      image: "/api/placeholder/400/400",
+      image: "/person/person1.png",
       course: "Full Stack Development",
       company: "Microsoft",
       position: "Senior Software Engineer",
@@ -14,7 +14,7 @@ const SuccessStories = () => {
     },
     {
       name: "Rahul Patel",
-      image: "/api/placeholder/400/400",
+      image: "/person/person2.png",
       course: "Data Science & AI",
       company: "Amazon",
       position: "Data Scientist",
@@ -22,7 +22,7 @@ const SuccessStories = () => {
     },
     {
       name: "Ananya Singh",
-      image: "/api/placeholder/400/400",
+      image: "/person/person3.png",
       course: "Cloud Computing & DevOps",
       company: "Google",
       position: "Cloud Solutions Architect",
@@ -82,7 +82,7 @@ const SuccessStories = () => {
                 <img
                   src={testimonials[currentIndex].image}
                   alt={testimonials[currentIndex].name}
-                  className="relative rounded-2xl object-cover w-full h-full transform transition-transform duration-500"
+                  className="relative rounded-2xl object-cover w-full h-full transform transition-transform duration-500 -rotate-6"
                 />
                 {/* Quote Icon */}
                 <div className="absolute -top-4 -right-4 bg-white p-3 rounded-full shadow-lg">

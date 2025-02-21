@@ -36,7 +36,7 @@ const CorporateTrainingHighlight = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <section className="py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50" name="training">
       <div className="container mx-auto px-6 lg:px-12">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -65,7 +65,7 @@ const CorporateTrainingHighlight = () => {
           >
             <div className="relative w-full h-[450px] rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="/api/placeholder/600/400"
+                src="/training.jpeg"
                 alt="Corporate Training"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -77,10 +77,7 @@ const CorporateTrainingHighlight = () => {
                 transition={{ delay: 0.3 }}
                 className="absolute bottom-6 left-6 right-6 text-white"
               >
-                <button className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full hover:bg-white/30 transition-colors">
-                  <Play className="h-5 w-5" />
-                  <span>Watch Overview</span>
-                </button>
+               
               </motion.div>
             </div>
           </motion.div>
@@ -125,20 +122,7 @@ const CorporateTrainingHighlight = () => {
               ))}
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-            >
-              <a
-                href="/corporate-training"
-                className="group inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium py-3 px-8 rounded-full shadow-lg transition-all hover:shadow-xl hover:scale-105"
-              >
-                Explore Our Programs
-                <ArrowRight className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" />
-              </a>
-            </motion.div>
+           
           </motion.div>
         </div>
       </div>
