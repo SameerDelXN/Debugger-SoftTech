@@ -37,7 +37,7 @@ const CorporateTrainingHighlight = () => {
 
   return (
     <section className="py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50" name="training">
-      <div className="container mx-auto px-6 lg:px-12">
+      <div className="container mx-auto p-5 ">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

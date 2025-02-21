@@ -79,7 +79,7 @@ const PlacementPartners = () => {
               <div className="bg-blue-50 w-12 h-12 mx-auto rounded-full flex items-center justify-center text-blue-600 mb-4">
                 {stat.icon}
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-2 phone:text-xl">{stat.value}</h3>
               <p className="text-gray-600">{stat.label}</p>
             </motion.div>
           ))}

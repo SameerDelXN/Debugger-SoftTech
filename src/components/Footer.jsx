@@ -39,19 +39,13 @@ const Footer = () => {
               <Link href="/" className="inline-block">
                 <div className="relative overflow-hidden group">
                   <Image
-                    src="/images/logo-white.svg"
+                    src="/footer-logo.png"
                     alt="Debugger SoftTech Logo"
                     width={180}
                     height={40}
                     className="h-14 w-auto transition-all duration-500 group-hover:opacity-0"
                   />
-                  <Image
-                    src="/images/logo-blue.svg"
-                    alt="Debugger SoftTech Logo Hover"
-                    width={180}
-                    height={40}
-                    className="h-14 w-auto absolute top-0 left-0 opacity-0 transition-all duration-500 group-hover:opacity-100"
-                  />
+                 
                 </div>
               </Link>
               <div className="h-px w-20 bg-gradient-to-r from-blue-400 to-purple-500"></div>

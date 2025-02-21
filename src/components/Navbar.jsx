@@ -47,13 +47,13 @@ const Header = () => {
           : 'bg-white/80 py-4 backdrop-blur-md'
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container px-4 phone:px-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link1 href="/" className="flex items-center relative z-10 group">
             <div className="overflow-hidden">
               <Image
-                src="/images/logo.svg"
+                src="/logo.png"
                 alt="Debugger SoftTech Logo"
                 width={180}
                 height={40}
@@ -109,7 +109,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden flex items-center justify-center w-11 h-11 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
+            className="lg:hidden flex items-center justify-center w-11 h-11 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors absolute right-0"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
