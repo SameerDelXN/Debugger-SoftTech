@@ -91,7 +91,7 @@ const Footer = () => {
                     {['Home', 'About Us', 'Courses', 'Corporate Training', 'Placement Assistance', 'Contact Us'].map((item) => (
                       <li key={item} className="transform transition-transform duration-300 hover:translate-x-2">
                         <Link 
-                          href={`/${item.toLowerCase().replace(/\s+/g, '-')}`} 
+                          href={`/`} 
                           className="group flex items-center text-gray-400 hover:text-white transition-colors"
                         >
                           <span className="inline-block w-6 overflow-hidden relative mr-1">
@@ -126,7 +126,7 @@ const Footer = () => {
                     ].map(([slug, title]) => (
                       <li key={slug} className="transform transition-transform duration-300 hover:translate-x-2">
                         <Link 
-                          href={`/courses#${slug}`} 
+                          href={`/`} 
                           className="group flex items-center text-gray-400 hover:text-white transition-colors"
                         >
                           <span className="inline-block w-6 overflow-hidden relative mr-1">
@@ -229,7 +229,7 @@ const Footer = () => {
               {['Privacy Policy', 'Terms & Conditions', 'Sitemap'].map((item) => (
                 <Link
                   key={item}
-                  href={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={`/`}
                   className="text-sm text-gray-400 hover:text-white transition-colors relative group"
                 >
                   <span>{item}</span>

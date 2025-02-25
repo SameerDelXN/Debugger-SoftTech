@@ -10,7 +10,14 @@ import Partners from "@/components/Partners"
 import CTA from "@/components/CTA"
 import Placement_Assistant from "@/components/Placement_Assistant"
 import ContactUs from "@/components/ContactUs";
+
+export const metadata = {
+  title: "Home | Debugger Softtech",
+  description: "Welcome to Debugger Softtech – Innovating IT solutions for a better tomorrow.",
+};
+
 export default function Home() {
+  
   return (
   <>
     <Hero/>
@@ -18,7 +25,7 @@ export default function Home() {
     <Courses/>
     <Statistics/>
     <Mission/>
-    <SuccessStory/>
+    {/* <SuccessStory/> */}
     <Training/>
     <Partners/>
     <CTA/>

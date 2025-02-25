@@ -28,7 +28,7 @@ const PlacementAssistance = () => {
 
   const stats = [
     { value: "95%", label: "Placement Rate" },
-    { value: "500+", label: "Hiring Partners" },
+    { value: "10+", label: "Hiring Partners" },
     { value: "50K+", label: "Average Package" }
   ];
 

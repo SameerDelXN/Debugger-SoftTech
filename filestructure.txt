@@ -1,0 +1,50 @@
+|-- .gitignore
+|-- jsconfig.json
+|-- next.config.mjs
+|-- package-lock.json
+|-- package.json
+|-- postcss.config.mjs
+|-- public
+    |-- 3dModel.png
+    |-- favicon.ico
+    |-- file.svg
+    |-- footer-logo.png
+    |-- globe.svg
+    |-- logo.png
+    |-- next.svg
+    |-- partner
+        |-- girl-5144084.jpg
+        |-- partner1.svg
+        |-- partner2.svg
+        |-- partner3.png
+        |-- partner3.svg
+        |-- partner4.jpg
+        |-- partner4.svg
+    |-- person
+        |-- person1.png
+        |-- person2.png
+        |-- person3.png
+    |-- training.jpeg
+    |-- vercel.svg
+    |-- window.svg
+|-- README.md
+|-- src
+    |-- app
+        |-- globals.css
+        |-- layout.js
+        |-- page.jsx
+    |-- components
+        |-- ContactUs.jsx
+        |-- Courses.jsx
+        |-- CTA.jsx
+        |-- Footer.jsx
+        |-- HeroSection.jsx
+        |-- Mission.jsx
+        |-- Navbar.jsx
+        |-- Partners.jsx
+        |-- Placement_Assistant.jsx
+        |-- Statistics.jsx
+        |-- Success_Story.jsx
+        |-- Training.jsx
+        |-- Why_Choose_Us.jsx
+|-- tailwind.config.mjs
