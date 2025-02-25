@@ -1,5 +1,6 @@
 |-- .gitignore
 |-- jsconfig.json
+|-- next-sitemap.config.js
 |-- next.config.mjs
 |-- package-lock.json
 |-- package.json
@@ -24,6 +25,9 @@
         |-- person1.png
         |-- person2.png
         |-- person3.png
+    |-- robots.txt
+    |-- sitemap-0.xml
+    |-- sitemap.xml
     |-- training.jpeg
     |-- vercel.svg
     |-- window.svg
