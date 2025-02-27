@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono,Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar.jsx"
 import Footer from "@/components/Footer";
@@ -10,6 +10,10 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
@@ -50,7 +54,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body
-  className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+  className={`${montserrat.variable} antialiased`}
 >
   <Navbar />
   <main className="pt-[70px] phone:pt-[90px]"> {/* Adjust the height based on your Navbar height */}
