@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center phone:p-5" name="home">
+    <div className="relative min-h-screen flex items-center p-5" name="home">
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-900/80" />

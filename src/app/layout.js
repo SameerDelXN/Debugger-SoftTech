@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
   className={`${montserrat.variable} antialiased`}
 >
   <Navbar />
-  <main className="pt-[70px] phone:pt-[90px]"> {/* Adjust the height based on your Navbar height */}
+  <main className="pt-[60px] phone:pt-[90px]"> {/* Adjust the height based on your Navbar height */}
     {children}
   </main>
   <Footer />
