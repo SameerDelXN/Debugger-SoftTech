@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { Code, Database, ChartBar, Cloud, TestTube, Smartphone, Layers } from 'lucide-react';
+import { Code, Database, ChartBar, Cloud, TestTube, Smartphone, Layers,Cpu,Gamepad } from 'lucide-react';
 
 const CourseCategories = () => {
   const categories = [
@@ -52,7 +52,22 @@ const CourseCategories = () => {
       description: "Create engaging user interfaces and seamless user experiences with modern design tools.",
       color: "from-teal-500 to-teal-600",
       link: "/courses/ui-ux-design"
+    },
+    {
+      icon: Cpu,
+      name: "System Programming",
+      description: "Master system-level programming with Rust and Golang.",
+      color: "from-red-600 to-red-700",
+      link: "/courses/system-programming"
+    },
+    {
+      icon: Gamepad,
+      name: "Game Development",
+      description: "Build immersive games using Unity 3D (C#) or Unreal Engine (C++).",
+      color: "from-red-500 to-red-600",
+      link: "/courses/game-development"
     }
+    
   ];
 
   return (

@@ -50,12 +50,15 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar/>
-        {children}
-        <Footer/>
-      </body>
+  className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+>
+  <Navbar />
+  <main className="pt-[70px]"> {/* Adjust the height based on your Navbar height */}
+    {children}
+  </main>
+  <Footer />
+</body>
+
     </html>
   );
 }

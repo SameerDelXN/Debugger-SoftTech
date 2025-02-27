@@ -71,14 +71,14 @@ const Hero = () => {
             <div className="flex items-center space-x-3 bg-white/5 backdrop-blur-sm p-4 rounded-lg">
               <Users className="text-purple-400 w-8 h-8" />
               <div>
-                <div className="text-2xl font-bold text-white">10K+</div>
+                <div className="text-2xl font-bold text-white">100+</div>
                 <div className="text-gray-400">Students Trained</div>
               </div>
             </div>
             <div className="flex items-center space-x-3 bg-white/5 backdrop-blur-sm p-4 rounded-lg">
               <Award className="text-green-400 w-8 h-8" />
               <div>
-                <div className="text-2xl font-bold text-white">50+</div>
+                <div className="text-2xl font-bold text-white">10+</div>
                 <div className="text-gray-400">Industry Partners</div>
               </div>
             </div>

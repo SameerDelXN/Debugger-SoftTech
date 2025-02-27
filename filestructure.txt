@@ -37,6 +37,12 @@
         |-- globals.css
         |-- layout.js
         |-- page.jsx
+        |-- privacy-policy
+            |-- layout.js
+            |-- page.jsx
+        |-- terms-and-conditions
+            |-- layout.js
+            |-- page.jsx
     |-- components
         |-- ContactUs.jsx
         |-- Courses.jsx

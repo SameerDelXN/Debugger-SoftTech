@@ -1,7 +1,8 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import Link1 from 'next/link';
 import Image from 'next/image';
+import { Link } from 'react-scroll';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, ArrowRight, Send, ChevronUp } from 'lucide-react';
 
 const Footer = () => {
@@ -36,7 +37,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
             {/* Company Info */}
             <div className="md:col-span-4 space-y-6">
-              <Link href="/" className="inline-block">
+              <Link1 href="/" className="inline-block">
                 <div className="relative overflow-hidden group">
                   <Image
                     src="/footer-logo.png"
@@ -47,7 +48,7 @@ const Footer = () => {
                   />
                  
                 </div>
-              </Link>
+              </Link1>
               <div className="h-px w-20 bg-gradient-to-r from-blue-400 to-purple-500"></div>
               <p className="text-gray-400 leading-relaxed text-base">
                 Empowering careers through industry-focused IT training and placement support. Building tomorrow's tech leaders today.
@@ -90,7 +91,7 @@ const Footer = () => {
                   <ul className="space-y-3">
                     {['Home', 'About Us', 'Courses', 'Corporate Training', 'Placement Assistance', 'Contact Us'].map((item) => (
                       <li key={item} className="transform transition-transform duration-300 hover:translate-x-2">
-                        <Link 
+                        <Link1
                           href={`/`} 
                           className="group flex items-center text-gray-400 hover:text-white transition-colors"
                         >
@@ -103,7 +104,7 @@ const Footer = () => {
                             </span>
                           </span>
                           {item}
-                        </Link>
+                        </Link1>
                       </li>
                     ))}
                   </ul>
@@ -125,8 +126,10 @@ const Footer = () => {
                       ['mobile-dev', 'Mobile Development']
                     ].map(([slug, title]) => (
                       <li key={slug} className="transform transition-transform duration-300 hover:translate-x-2">
-                        <Link 
-                          href={`/`} 
+                        <Link
+                         
+                          to='courses'
+                          smooth={true} 
                           className="group flex items-center text-gray-400 hover:text-white transition-colors"
                         >
                           <span className="inline-block w-6 overflow-hidden relative mr-1">
@@ -226,15 +229,24 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
-              {['Privacy Policy', 'Terms & Conditions', 'Sitemap'].map((item) => (
-                <Link
-                  key={item}
-                  href={`/`}
+              {[
+                {
+                  itemName : "Privacy Policy",
+                  itemUrl:"privacy-policy"
+                },
+                {
+                  itemName : "Terms & Conditions",
+                  itemUrl : "terms-and-conditions"
+                }
+              ].map((item) => (
+                <Link1
+                  key={item.itemName}
+                  href={item.itemUrl}
                   className="text-sm text-gray-400 hover:text-white transition-colors relative group"
                 >
-                  <span>{item}</span>
+                  <span>{item.itemName}</span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
+                </Link1>
               ))}
             </div>
           </div>

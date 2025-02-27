@@ -1,172 +1,160 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link1 from 'next/link';
+import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, Menu, X, ChevronDown, Globe, GraduationCap, BookOpen } from 'lucide-react';
-import { Link } from 'react-scroll';
-const Header = () => {
+import { Phone, Menu, X } from 'lucide-react';
+import { Link as ScrollLink } from 'react-scroll';
+
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [hoverIndex, setHoverIndex] = useState(null);
 
   const navItems = [
     { name: 'Home', to: 'home' },
+    { name: 'Courses', to: 'courses' },
     { name: 'About', to: 'about' },
-    { name: 'Courses', to: 'courses' }, // Removed the dropdown
+    
     { name: 'Corporate Training', to: 'training' },
     { name: 'Placement', to: 'placement' },
     { name: 'Contact', to: 'contact' },
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    const handleClickOutside = () => setActiveDropdown(null);
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
-  }, []);
-
-  const handleDropdownToggle = (e, index) => {
-    e.stopPropagation();
-    setActiveDropdown(activeDropdown === index ? null : index);
-  };
-
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-500 ${
-        isScrolled
-          ? 'bg-white/95 shadow-lg py-2 backdrop-blur-lg'
-          : 'bg-white/80 py-4 backdrop-blur-md'
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-white py-2 shadow-md' 
+          : 'bg-white py-4'
       }`}
     >
-      <div className="container px-4 phone:px-2">
-        <div className="flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link1 href="/" className="flex items-center relative z-10 group">
-            <div className="overflow-hidden">
-              <Image
-                src="/logo.png"
-                alt="Debugger SoftTech Logo"
-                width={180}
-                height={40}
-                className="h-10 w-auto transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
-              />
-            </div>
-          </Link1>
+          <Link href="/" className="flex-shrink-0">
+            <Image
+              src="/logo.png"
+              alt="Debugger SoftTech Logo"
+              width={150}
+              height={40}
+              className="h-9 w-auto transition-all"
+            />
+          </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-2">
-            {navItems.map((item, index) => (
-              <div
-                key={item.name}
-                className="relative group"
-                onMouseEnter={() => setHoverIndex(index)}
-                onMouseLeave={() => setHoverIndex(null)}
-              >
-                <Link
+          <nav className="hidden lg:flex">
+            <div className="flex space-x-1 bg-gray-50 rounded-full p-1.5">
+              {navItems.map((item) => (
+                <ScrollLink
+                  key={item.name}
                   to={item.to}
                   smooth={true}
-                  className={`px-4 py-2.5 rounded-lg text-gray-700 font-medium transition-all duration-300 cursor-pointer
-                    ${hoverIndex === index ? 'bg-blue-50/50 scale-105' : ''}
-                    hover:text-blue-600 hover:bg-blue-50 hover:scale-105`}
+                  className="px-5 py-2 text-sm font-medium rounded-full text-gray-700 hover:bg-blue-600 hover:text-white transition-all duration-200 cursor-pointer"
                 >
                   {item.name}
-                </Link>
-              </div>
-            ))}
+                </ScrollLink>
+              ))}
+            </div>
           </nav>
 
-          {/* Phone and CTA - Desktop */}
-          <div className="hidden lg:flex items-center space-x-6">
+          {/* Contact & CTA - Desktop */}
+          <div className="hidden lg:flex items-center space-x-5">
             <a
               href="tel:+918446344495"
-              className="flex items-center text-gray-700 hover:text-blue-600 transition-all duration-300 group hover:scale-105"
+              className="flex items-center text-gray-700 hover:text-blue-600 transition-all"
             >
-              <div className="p-2.5 rounded-lg bg-blue-50 mr-3 group-hover:bg-blue-100 transition-colors duration-300">
-                <Phone size={18} className="text-blue-600 group-hover:rotate-12 transition-transform" />
+              <div className="p-2 rounded-full bg-gray-100 mr-2">
+                <Phone size={16} className="text-blue-600" />
               </div>
               <span className="font-medium">+91 8446344495</span>
             </a>
-            <Link1
-  href="https://forms.gle/EsUZ9h1EixC1a18r8"
-  target="_blank"
-  className="w-full  block"
-  onClick={() => setIsMenuOpen(false)}
->
-  <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-medium py-4 px-4 rounded-xl transition-all duration-300 shadow-md w-full text-center block">
-    Enroll Now
-  </span>
-</Link1>
+            <Link
+              href="https://forms.gle/EsUZ9h1EixC1a18r8"
+              target="_blank"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-6 rounded-full transition-all duration-200 hover:shadow-lg"
+            >
+              Enroll Now
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden flex items-center justify-center w-11 h-11 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors absolute right-0"
+            className="lg:hidden p-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
           >
-            {isMenuOpen ? (
-              <X size={22} className="animate-fadeIn" />
-            ) : (
-              <Menu size={22} className="animate-fadeIn" />
-            )}
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Navigation */}
       <div
-        className={`lg:hidden fixed inset-x-0 bg-white/95 backdrop-blur-lg border-t shadow-lg transition-all duration-500 ease-in-out overflow-hidden ${
-          isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+        className={`lg:hidden fixed inset-0 bg-white z-40 transform transition-all duration-300 ${
+          isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
         }`}
       >
-        <div className="container mx-auto px-4 py-4">
-          <nav className="flex flex-col space-y-1">
+        <div className="flex flex-col h-full justify-center px-6">
+          <div className="mb-10 text-center">
+            <Image
+              src="/logo.png"
+              alt="Debugger SoftTech Logo"
+              width={180}
+              height={45}
+              className="h-12 w-auto mx-auto"
+            />
+          </div>
+          
+          <nav className="flex flex-col space-y-6 items-center">
             {navItems.map((item) => (
-              <Link
+              <ScrollLink
                 key={item.name}
                 to={item.to}
                 smooth={true}
-                className="block py-3.5 px-3 text-gray-700 cursor-pointer hover:text-blue-600 font-medium border-b border-gray-100 rounded-lg hover:bg-blue-50/50 transition-all duration-300"
+                className="text-lg text-gray-800 hover:text-blue-600 font-medium transition-all"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
-              </Link>
+              </ScrollLink>
             ))}
-            <div className="pt-4">
-              <a
-                href="tel:+918446344495"
-                className="flex items-center text-gray-700 hover:text-blue-600 py-3.5 px-3 transition-all duration-300 rounded-lg hover:bg-blue-50/50 group"
-              >
-                <div className="p-2 rounded-lg bg-blue-50 mr-3 group-hover:bg-blue-100 transition-all duration-300">
-                  <Phone size={18} className="text-blue-600 group-hover:rotate-12 transition-transform" />
-                </div>
-                <span className="font-medium">+91 8446344495</span>
-              </a>
-              <Link1
-  href="https://forms.gle/EsUZ9h1EixC1a18r8"
-  target="_blank"
-  className="w-full mt-5 block"
-  onClick={() => setIsMenuOpen(false)}
->
-  <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-medium py-4 px-4 rounded-xl transition-all duration-300 shadow-md w-full text-center block">
-    Enroll Now
-  </span>
-</Link1>
-            </div>
           </nav>
+          
+          <div className="mt-12 flex flex-col items-center space-y-6">
+            <a
+              href="tel:+918446344495"
+              className="flex items-center text-gray-800"
+            >
+              <div className="p-2 rounded-full bg-gray-100 mr-3">
+                <Phone size={18} className="text-blue-600" />
+              </div>
+              <span className="font-medium">+91 8446344495</span>
+            </a>
+            <Link
+              href="https://forms.gle/EsUZ9h1EixC1a18r8"
+              target="_blank"
+              className="bg-blue-600 text-white font-medium py-3 px-8 rounded-full text-center w-48 hover:bg-blue-700"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Enroll Now
+            </Link>
+          </div>
+          
+          {/* Close button */}
+          <button 
+            className="absolute top-6 right-6 p-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <X size={24} />
+          </button>
         </div>
       </div>
     </header>
   );
 };
 
-export default Header
+export default Navbar;
