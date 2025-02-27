@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FileText, Users, Briefcase, Award, ArrowRight, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
 
 const PlacementAssistance = () => {
   const services = [
@@ -110,13 +111,13 @@ const PlacementAssistance = () => {
             <p className="text-lg mb-8 opacity-90">
               Join our training programs and take the first step towards your dream career in tech!
             </p>
-            <a
-              href="/join-now"
+            <Link
+              href="https://forms.google.com"
               className="group inline-flex items-center bg-white text-blue-600 font-semibold py-3 px-8 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               Get Started
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

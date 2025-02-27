@@ -72,8 +72,8 @@ const Footer = () => {
                   <span className="flex-shrink-0 w-8 h-8 bg-blue-500/10 rounded-full flex items-center justify-center mr-3">
                     <Mail size={16} className="text-blue-400 group-hover:text-blue-300 transition-colors" />
                   </span>
-                  <a href="mailto:debuggersofttech@outlook.com" className="group-hover:text-white transition-colors truncate">
-                    debuggersofttech@outlook.com
+                  <a href="mailto:info@debuggersofttech.com" className="group-hover:text-white transition-colors truncate">
+                  info@debuggersofttech.com
                   </a>
                 </li>
               </ul>

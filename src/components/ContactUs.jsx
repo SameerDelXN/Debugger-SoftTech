@@ -25,8 +25,8 @@ const ContactUs = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       label: "Email Us",
-      value: "debuggersofttech@outlook.com",
-      link: "mailto:debuggersofttech@outlook.com",
+      value: "info@debuggersofttech.com",
+      link: "mailto:info@debuggersofttech.com",
       color: "from-blue-400 to-indigo-600",
     },
     {

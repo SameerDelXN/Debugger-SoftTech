@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
   className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 >
   <Navbar />
-  <main className="pt-[70px]"> {/* Adjust the height based on your Navbar height */}
+  <main className="pt-[70px] phone:pt-[90px]"> {/* Adjust the height based on your Navbar height */}
     {children}
   </main>
   <Footer />

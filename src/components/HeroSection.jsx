@@ -1,18 +1,15 @@
 "use client"
 import React from 'react';
 import { ChevronRight, Rocket, Users, Award } from 'lucide-react';
+import { Link } from 'react-scroll';
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center " name="home">
+    <div className="relative min-h-screen flex items-center phone:p-5" name="home">
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-900/80" />
-        <img 
-          src="/api/placeholder/1920/1080" 
-          alt="Tech professionals collaborating" 
-          className="w-full h-full object-cover"
-        />
+       
       </div>
 
       {/* Animated shapes in background */}
@@ -54,9 +51,9 @@ const Hero = () => {
               Enroll Now
               <ChevronRight className="ml-2 w-5 h-5" />
             </a>
-            <button className="inline-flex items-center bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-medium backdrop-blur-sm transition-all duration-300">
+            <Link to='courses' smooth={true} className="cursor-pointer inline-flex items-center bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-medium backdrop-blur-sm transition-all duration-300">
               Explore Courses
-            </button>
+            </Link>
           </div>
 
           {/* Stats */}
